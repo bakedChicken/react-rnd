@@ -381,6 +381,7 @@ export class Rnd extends React.Component<Props, State> {
     elementRef: HTMLDivElement,
     delta: { height: number; width: number },
   ) {
+    e.stopPropagation();
     let x;
     let y;
     const offset = this.getOffsetFromParent();
@@ -420,6 +421,7 @@ export class Rnd extends React.Component<Props, State> {
     elementRef: HTMLDivElement,
     delta: { height: number; width: number },
   ) {
+    e.stopPropagation();
     this.isResizing = false;
     const { maxWidth, maxHeight } = this.getMaxSizesFromProps();
     this.setState({ maxWidth, maxHeight });
@@ -512,8 +514,11 @@ export class Rnd extends React.Component<Props, State> {
         handle={dragHandleClassName ? `.${dragHandleClassName}` : undefined}
         defaultPosition={defaultValue}
         onMouseDown={onMouseDown}
+        // @ts-ignore
         onStart={this.onDragStart}
+        // @ts-ignore
         onDrag={this.onDrag}
+        // @ts-ignore
         onStop={this.onDragStop}
         axis={dragAxis}
         disabled={disableDragging}
