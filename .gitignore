@@ -1,6 +1,6 @@
 node_modules/
 example/dist/
-lib/
+.idea
 npm-debug.log
 .rpt2_cache
 yarn-error.log
