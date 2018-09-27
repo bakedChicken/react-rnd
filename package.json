@@ -83,7 +83,7 @@
     "fixture": "./fixture.html"
   },
   "dependencies": {
-    "re-resizable": "4.8.0",
+    "re-resizable": "git+https://github.com/bakedChicken/re-resizable.git#native-events",
     "react-draggable": "git+https://github.com/bakedChicken/react-draggable#native-events",
     "tslib": "1.9.3"
   }
